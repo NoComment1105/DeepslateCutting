@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "deepslatecutting",
+  "version": "${version}",
+
+  "name": "Deepslate Cutting",
+  "description": "This mod allows you to use regular Deepslate in a stonecutter!",
+  "authors": [
+    "NoComment1105"
+  ],
+  "contact": {
+    "homepage": "https://nocomment1105.github.io",
+    "sources": "https://github.com/NoComment1105/DeepslateCutting-fabric"
+  },
+
+  "license": "LGPL-3.0",
+  "icon": "assets/deepslatecutting/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "me.nocomment1105.DeepslateCutting.deepslatecutting"
+    ]
+  },
+  "mixins": [],
+
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "1.17.x",
+    "java": ">=16"
+  }
+}

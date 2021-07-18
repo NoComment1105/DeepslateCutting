@@ -1,0 +1,56 @@
+name: Bug Report
+descriptio: Create a report to help us imporove
+labels: [bug]
+body:
+  - type: markdown
+  attributes:
+    value: |
+      Thanks for taking the time to fill out this bug report!
+
+      Before continuing to make this issue, please make sure there are no similar issues on the [issue tracker](https://github.com/NoComment1105/DeepslateCutting/issues), If there are, consider contributing your information there!
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: "Also tell us, what did you expect to happen. Provide some steps for reproduction: What did you do to trigger this bug?"
+      placeholder: Tell us what you see!
+      value: "A bug happended"
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: If required, add some screenshots to help you explain your problem.
+      placeholder: You can add images by clicking on the button in the bar that will appear once you click this textbox.
+    validations:
+      required: false
+  - type: textarea
+  id: logs
+  attributes:
+    label: Relevant log output
+    description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+    render: shell
+  - type: input
+    id: version
+    attributes:
+      label: DeepslateCutting and Minecraft Version
+      description: What version of DeepslateCutting are you running? Include the Minecraft version too. Every part is  important! If you do not know what version you are using, look at the file name in your "mods" folder.
+      placeholder: ex. DeepslateCutting-1.17-1.0.0.jar for Minecraft 1.16.5
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Operating System
+      description: What is your Operating System?
+      placeholder: ex. Windows 10
+    validations:
+      required: true
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Add any other context about the problem here.
+    validations:
+      required: false
