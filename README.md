@@ -3,11 +3,11 @@
 ![Github Issues](https://img.shields.io/github/issues/NoComment1105/DeepslateCutting-fabric.svg?label=Issues)
 ![Latest Release](https://img.shields.io/github/v/release/NoComment1105/DeepslateCutting-fabric?label=Latest%20Release)
 [![Discord Chat](https://img.shields.io/badge/Chat%20on-Discord-7289DA)](https://discord.gg/28N2Eeq2tT)
-[![CurseForge-Availability](http://cf.way2muchnoise.eu/versions/periodic.svg)](https://www.curseforge.com/minecraft/mc-mods/periodic)
+[![CurseForge-Availability](http://cf.way2muchnoise.eu/versions/deepslatecutting.svg)](https://www.curseforge.com/minecraft/mc-mods/deepslatecutting)
 
 
 #### Download Counts
-[![CurseForge downloads](http://cf.way2muchnoise.eu/full_470001_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/periodic)
+[![CurseForge downloads](http://cf.way2muchnoise.eu/full_504899_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/deepslatecutting)
 [![Github all releases](https://img.shields.io/github/downloads/NoComment1105/DeepslateCutting-fabric/total.svg?label=Downloads%20From%20GH)](https://GitHub.com/NoComment1105/periodic-mod-fabric/releases/)
 
 ![icon](https://user-images.githubusercontent.com/67918617/126058887-68317cb4-b734-463a-8d1a-607c536fb80e.png)
@@ -35,7 +35,7 @@ I will try my hardest to updates this mod, in its latest release at the time, wi
 ----
 
 ### Issues
-If you have discovered an issue with my mod, please do not hesitate to ask anything in my [Discord](https://discord.gg/28N2Eeq2tT) or leave an issue in my [issue tracker](https://www.github.com/NoComment1105/periodic-mod-fabric/issues) but please check for a duplicate of your issue first, thanks :)
+If you have discovered an issue with my mod, please do not hesitate to ask anything in my [Discord](https://discord.gg/28N2Eeq2tT) or leave an issue in my [issue tracker](https://www.github.com/NoComment1105/DeepslateCutting-fabric/issues) but please check for a duplicate of your issue first, thanks :)
 
 ### License
 DeepslateCutting is licensed under GNU LGPLv3, which is a free and open-source license. If you want to know more, poke 
