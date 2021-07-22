@@ -1,4 +1,4 @@
-## Version 2.0.0
+## Version 1.1.0
 #### Second release of deepslatecutting
 * New features: Regular deepslate variants of cobbled deepslate slabs, stairs and walls
 * Added the recipes that my smooth brain missed
