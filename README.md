@@ -17,6 +17,7 @@ This mod allows regular deepslate to be put into the stone cutter and made into 
 
 ### Features
 * Allows regular deepslate to be used in the stone cutter
+* As well as this it add regular Deepslate variants of wall, stairs and slab. All of these configured off by defualt.
 
 ### The Developers
 
