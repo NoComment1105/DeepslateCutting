@@ -1,7 +1,7 @@
-package me.nocomment1105.DeepslateCutting.registry;
+package io.github.nocomment1105.DeepslateCutting.registry;
 
-import me.nocomment1105.DeepslateCutting.blocks.DeepslateCuttingStairsBlock;
-import me.nocomment1105.DeepslateCutting.deepslatecutting;
+import io.github.nocomment1105.DeepslateCutting.deepslatecutting;
+import io.github.nocomment1105.DeepslateCutting.blocks.DeepslateCuttingStairsBlock;
 import net.minecraft.block.*;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;

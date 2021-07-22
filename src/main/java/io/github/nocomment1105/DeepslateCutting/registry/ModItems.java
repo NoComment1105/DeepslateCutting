@@ -1,6 +1,6 @@
-package me.nocomment1105.DeepslateCutting.registry;
+package io.github.nocomment1105.DeepslateCutting.registry;
 
-import me.nocomment1105.DeepslateCutting.deepslatecutting;
+import io.github.nocomment1105.DeepslateCutting.deepslatecutting;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;

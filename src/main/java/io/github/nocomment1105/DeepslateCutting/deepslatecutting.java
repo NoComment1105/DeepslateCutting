@@ -1,8 +1,8 @@
-package me.nocomment1105.DeepslateCutting;
+package io.github.nocomment1105.DeepslateCutting;
 
-import me.nocomment1105.DeepslateCutting.config.Config;
-import me.nocomment1105.DeepslateCutting.registry.ModBlocks;
-import me.nocomment1105.DeepslateCutting.registry.ModItems;
+import io.github.nocomment1105.DeepslateCutting.config.Config;
+import io.github.nocomment1105.DeepslateCutting.registry.ModBlocks;
+import io.github.nocomment1105.DeepslateCutting.registry.ModItems;
 import net.fabricmc.api.ModInitializer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

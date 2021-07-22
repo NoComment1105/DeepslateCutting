@@ -1,7 +1,7 @@
-package me.nocomment1105.DeepslateCutting.config;
+package io.github.nocomment1105.DeepslateCutting.config;
 
 import com.moandjiezana.toml.Toml;
-import me.nocomment1105.DeepslateCutting.deepslatecutting;
+import io.github.nocomment1105.DeepslateCutting.deepslatecutting;
 import net.fabricmc.loader.api.FabricLoader;
 import java.io.File;
 import java.io.IOException;

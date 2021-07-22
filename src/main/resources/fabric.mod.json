@@ -19,7 +19,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "me.nocomment1105.DeepslateCutting.deepslatecutting"
+      "io.github.nocomment1105.DeepslateCutting.deepslatecutting"
     ]
   },
   "mixins": [],
