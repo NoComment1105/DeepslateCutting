@@ -1,3 +1,7 @@
+## Version 1.1.1
+#### A quick hotfix of deepslatecutting
+* My smooth brain forgot the loot tables for deepslate walls, stairs and blocks
+
 ## Version 1.1.0
 #### Second release of deepslatecutting
 * New features: Regular deepslate variants of cobbled deepslate slabs, stairs and walls
