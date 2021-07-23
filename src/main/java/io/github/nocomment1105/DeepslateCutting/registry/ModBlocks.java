@@ -1,17 +1,25 @@
 package io.github.nocomment1105.DeepslateCutting.registry;
 
-import io.github.nocomment1105.DeepslateCutting.deepslatecutting;
 import io.github.nocomment1105.DeepslateCutting.blocks.DeepslateCuttingStairsBlock;
+import io.github.nocomment1105.DeepslateCutting.deepslatecutting;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.*;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-import static net.minecraft.block.Blocks.*;
+import static net.minecraft.block.Blocks.COBBLED_DEEPSLATE_STAIRS;
 
 public class ModBlocks {
-    public static final Block DEEPSLATE_SLAB = new SlabBlock(AbstractBlock.Settings.of(Material.STONE, MapColor.DEEPSLATE_GRAY).requiresTool().strength(3.5f, 6).sounds(BlockSoundGroup.DEEPSLATE));
-    public static final Block DEEPSLATE_STAIRS = new DeepslateCuttingStairsBlock(DEEPSLATE.getDefaultState(), AbstractBlock.Settings.copy(DEEPSLATE));
-    public static final Block DEEPSLATE_WALL = new WallBlock(AbstractBlock.Settings.copy(DEEPSLATE_SLAB));
+    public static final Block DEEPSLATE_SLAB = new SlabBlock(FabricBlockSettings.of(Material.STONE,
+            MapColor.DEEPSLATE_GRAY).breakByTool(FabricToolTags.PICKAXES, 0).requiresTool()
+            .strength(3.5f, 6).sounds(BlockSoundGroup.DEEPSLATE));
+    public static final Block DEEPSLATE_STAIRS = new DeepslateCuttingStairsBlock(COBBLED_DEEPSLATE_STAIRS
+            .getDefaultState(), FabricBlockSettings.of(Material.STONE, MapColor.DEEPSLATE_GRAY).breakByTool(FabricToolTags.PICKAXES, 0)
+                    .requiresTool().strength(3.5f,6).sounds(BlockSoundGroup.DEEPSLATE));
+    public static final Block DEEPSLATE_WALL = new WallBlock(FabricBlockSettings.of(Material.STONE, MapColor.DEEPSLATE_GRAY)
+            .breakByTool(FabricToolTags.PICKAXES,0).requiresTool().strength(3.5f,6)
+            .sounds(BlockSoundGroup.DEEPSLATE));
 
     public static void registerBlocks() {
         Registry.register(Registry.BLOCK, new Identifier(deepslatecutting.MOD_ID, "deepslate_slab"), DEEPSLATE_SLAB);
