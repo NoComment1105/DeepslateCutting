@@ -1,8 +1,9 @@
 name: Bug Report
-descriptio: Create a report to help us imporove
+description: Create a report to help us imporove
 labels: [bug]
 body:
-  - type: markdown
+  - attributes:
+    type: markdown
   attributes:
     value: |
       Thanks for taking the time to fill out this bug report!
@@ -14,7 +15,7 @@ body:
       label: What happened?
       description: "Also tell us, what did you expect to happen. Provide some steps for reproduction: What did you do to trigger this bug?"
       placeholder: Tell us what you see!
-      value: "A bug happended"
+      value: "A bug happened"
     validations:
       required: true
   - type: textarea
