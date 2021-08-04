@@ -25,7 +25,6 @@ body:
     placeholder: You can add images by clicking on the button in the bar that will appear once you click this textbox.
   validations:
     required: false
-
 - type: textarea
   id: logs
   attributes:
@@ -34,26 +33,26 @@ body:
     render: shell
   validations:
     required: false
-  - type: input
-    id: version
-    attributes:
-      label: DeepslateCutting and Minecraft Version
-      description: What version of DeepslateCutting are you running? Include the Minecraft version too. Every part is  important! If you do not know what version you are using, look at the file name in your "mods" folder.
-      placeholder: ex. DeepslateCutting-1.17-1.0.0.jar for Minecraft 1.16.5
-    validations:
-      required: true
-  - type: input
-    id: os
-    attributes:
-      label: Operating System
-      description: What is your Operating System?
-      placeholder: ex. Windows 10
-    validations:
-      required: true
-  - type: textarea
-    id: additional-context
-    attributes:
-      label: Additional context
-      description: Add any other context about the problem here.
-    validations:
-      required: false
+- type: input
+  id: version
+  attributes:
+    label: DeepslateCutting and Minecraft Version
+    description: What version of DeepslateCutting are you running? Include the Minecraft version too. Every part is  important! If you do not know what version you are using, look at the file name in your "mods" folder.
+    placeholder: ex. DeepslateCutting-1.17-1.0.0.jar for Minecraft 1.16.5
+  validations:
+    required: true
+- type: input
+  id: os
+  attributes:
+    label: Operating System
+    description: What is your Operating System?
+    placeholder: ex. Windows 10
+  validations:
+    required: true
+- type: textarea
+  id: additional-context
+  attributes:
+    label: Additional context
+    description: Add any other context about the problem here.
+  validations:
+    required: false
