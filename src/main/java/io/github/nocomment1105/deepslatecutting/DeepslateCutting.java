@@ -19,6 +19,7 @@ public class DeepslateCutting implements ModInitializer {
             ModBlocks.registerBlocks();
             ModItems.registerItems();
             LOGGER.info("Loaded Config! Regular deepslate extras are ON");
+            LOGGER.info("If you are running a server, please tell your clients they need to enable extras too!");
         } else {
             LOGGER.info("Loaded Config! Regular deepslate extras are OFF");
         }
