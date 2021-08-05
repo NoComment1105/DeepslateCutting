@@ -105,6 +105,7 @@ publishing {
 		project {
 			id = '504899'
 			releaseType = "release"
+			changelog = file("changelog.md")
 			relations {
 				requiredDependency "fabric-api"
 			}
