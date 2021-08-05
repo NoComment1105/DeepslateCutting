@@ -1,7 +1,7 @@
-package io.github.nocomment1105.DeepslateCutting.config;
+package io.github.nocomment1105.deepslatecutting.config;
 
 import com.moandjiezana.toml.Toml;
-import io.github.nocomment1105.DeepslateCutting.deepslatecutting;
+import io.github.nocomment1105.deepslatecutting.DeepslateCutting;
 import net.fabricmc.loader.api.FabricLoader;
 import java.io.File;
 import java.io.IOException;
@@ -19,11 +19,11 @@ public class Config {
             Toml toml = new Toml().read(file);
             this.smoothStuff = toml.getBoolean("smoothStuff");
         } else {
-            deepslatecutting.LOGGER.info("Unable to find config file for DeepslateCutting, creating");
+            DeepslateCutting.LOGGER.info("Unable to find config file for DeepslateCutting, creating");
             try {
                 Files.copy(Objects.requireNonNull(Config.class.getResourceAsStream("/data/deepslatecutting/default_config.toml")), file.toPath());
             } catch (IOException e) {
-                deepslatecutting.LOGGER.warn("Unable to create config file for DeepslateCutting");
+                DeepslateCutting.LOGGER.warn("Unable to create config file for DeepslateCutting");
             }
        }
     }

@@ -1,4 +1,4 @@
-package io.github.nocomment1105.DeepslateCutting.blocks;
+package io.github.nocomment1105.deepslatecutting.blocks;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.block.StairsBlock;

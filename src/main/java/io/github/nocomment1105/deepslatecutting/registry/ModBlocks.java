@@ -1,6 +1,6 @@
-package io.github.nocomment1105.DeepslateCutting.registry;
+package io.github.nocomment1105.deepslatecutting.registry;
 
-import io.github.nocomment1105.DeepslateCutting.blocks.DeepslateCuttingStairsBlock;
+import io.github.nocomment1105.deepslatecutting.blocks.DeepslateCuttingStairsBlock;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.*;
@@ -8,7 +8,7 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
-import static io.github.nocomment1105.DeepslateCutting.deepslatecutting.MOD_ID;
+import static io.github.nocomment1105.deepslatecutting.DeepslateCutting.MOD_ID;
 import static net.minecraft.block.Blocks.COBBLED_DEEPSLATE_STAIRS;
 
 public class ModBlocks {

@@ -1,13 +1,13 @@
-package io.github.nocomment1105.DeepslateCutting;
+package io.github.nocomment1105.deepslatecutting;
 
-import io.github.nocomment1105.DeepslateCutting.config.Config;
-import io.github.nocomment1105.DeepslateCutting.registry.ModBlocks;
-import io.github.nocomment1105.DeepslateCutting.registry.ModItems;
+import io.github.nocomment1105.deepslatecutting.config.Config;
+import io.github.nocomment1105.deepslatecutting.registry.ModBlocks;
+import io.github.nocomment1105.deepslatecutting.registry.ModItems;
 import net.fabricmc.api.ModInitializer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class deepslatecutting implements ModInitializer {
+public class DeepslateCutting implements ModInitializer {
     public static final String MOD_ID = "deepslatecutting";
     public static Config CONFIG;
     public static final Logger LOGGER = LogManager.getLogger("Deepslate Cutting");

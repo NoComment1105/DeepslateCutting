@@ -19,10 +19,12 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "io.github.nocomment1105.DeepslateCutting.deepslatecutting"
+      "io.github.nocomment1105.deepslatecutting.DeepslateCutting"
     ]
   },
-  "mixins": [],
+  "mixins": [
+    "deepslatecutting.mixins.json"
+  ],
 
   "depends": {
     "fabricloader": ">=0.11.3",

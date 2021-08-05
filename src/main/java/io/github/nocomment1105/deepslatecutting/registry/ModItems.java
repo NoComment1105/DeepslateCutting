@@ -1,13 +1,12 @@
-package io.github.nocomment1105.DeepslateCutting.registry;
+package io.github.nocomment1105.deepslatecutting.registry;
 
-import io.github.nocomment1105.DeepslateCutting.deepslatecutting;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
-import static io.github.nocomment1105.DeepslateCutting.deepslatecutting.MOD_ID;
+import static io.github.nocomment1105.deepslatecutting.DeepslateCutting.MOD_ID;
 
 public class ModItems {
     public static final BlockItem DEEPSLATE_SLAB = new BlockItem(ModBlocks.DEEPSLATE_SLAB, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
