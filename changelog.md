@@ -1,3 +1,8 @@
+## Version 1.1.2
+#### A Bug fix release
+* Fixes [#1](https://github.com/NoComment1105/DeepslateCutting-fabric/issues/1)
+* Added new message on startup for server owners telling them that if deepslate extras are on they will need to tell their clients they need it on too
+
 ## Version 1.1.1
 #### A quick hotfix of deepslatecutting
 * My smooth brain forgot the loot tables for deepslate walls, stairs and blocks
