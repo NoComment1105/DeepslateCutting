@@ -1,0 +1,45 @@
+name: Feature Request
+description: Suggest a feature to add to this mod!
+title: Feature Request
+labels: [enhancement]
+body:
+- type: dropdown
+  id: problem-related
+  attributes:
+    label: Related to a problem?
+    description: If your feature request is related to a problem, please select yes!
+    options:
+      - 'yes'
+      - 'no'
+  validations:
+    required: true
+- type: textarea
+  id: problem-related-description
+  attributes:
+    label: Describe the related problem
+    description: Please describe the problem your feature is related to, or link the Github Issue
+    placeholder: My feature is related to the issue where blocks do not appear in the creative menu
+  validations:
+    required: false
+- type: textarea
+  id: suggested-soloution
+  attributes:
+    label: Describe the soloution you'd like
+    description: Please provide a clear and concise description of the soloution you would like.
+    placeholder: Adding some code to make the blocks appear in the creative menu
+  validations:
+    required: true
+- type: textarea
+  id: considered-alternatives
+  attributes:
+    label: Describe the alternatives considered
+    description: If you have considered any alternatives please list them here
+  validations:
+    required: true
+- type: textarea
+  id: additional-context
+  attributes:
+    label: Additional context
+    description: Please provide any additional context you have for this feature
+  validations:
+    required: false
