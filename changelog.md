@@ -1,3 +1,11 @@
+## Version 1.2.0
+#### Modmenu support woo
+* Added Modmenu support, uses Cloth config too
+* Fixes config settings always being true on first time startup, and first time startup alone
+* Added some description to the defualt_config.toml to make things a bit clearer for the user
+* Somehow managed to stop players getting yeeted for registry remap failure when joining a server with deepslate extras off (i think this is the case, it didnt do it for me in my testing )
+* Touched up the logo a little to remove the white outline
+* Updated the changelog pushing to curseforge to default to markdown
 ## Version 1.1.2
 #### A Bug fix release
 * Fixes [#1](https://github.com/NoComment1105/DeepslateCutting-fabric/issues/1)
