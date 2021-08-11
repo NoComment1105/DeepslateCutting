@@ -114,7 +114,7 @@ publishing {
 		project {
 			id = '504899'
 			releaseType = "release"
-			changelogType = "mardown"
+			changelogType = "markdown"
 			changelog = file("changelog.md")
 			relations {
 				requiredDependency "fabric-api"
