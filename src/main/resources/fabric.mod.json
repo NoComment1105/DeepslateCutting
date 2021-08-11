@@ -10,7 +10,18 @@
   ],
   "contact": {
     "homepage": "https://nocomment1105.github.io",
-    "sources": "https://github.com/NoComment1105/DeepslateCutting-fabric"
+    "sources": "https://github.com/NoComment1105/DeepslateCutting-fabric",
+    "issues": "https://github.com/NoComment1105/DeepslateCutting-fabric/issues"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.modrinth": "https://modrinth.com/mod/deepslatecutting",
+        "modmenu.curseforge": "https://curseforge.com/minecraft/mc-mods/deepslatecutting",
+        "modmenu.discord": "https://discord.gg/28N2Eeq2tT",
+        "modmenu.patreon": "https://www.patreon.com/NoComment1105"
+      }
+}
   },
 
   "license": "LGPL-3.0",
@@ -20,6 +31,9 @@
   "entrypoints": {
     "main": [
       "io.github.nocomment1105.deepslatecutting.DeepslateCutting"
+    ],
+    "modmenu": [
+      "io.github.nocomment1105.deepslatecutting.DeepslateCuttingModMenu"
     ]
   },
   "mixins": [
@@ -31,5 +45,8 @@
     "fabric": "*",
     "minecraft": "1.17.x",
     "java": ">=16"
+  },
+  "recommends": {
+    "modmenu": "*"
   }
 }

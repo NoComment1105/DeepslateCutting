@@ -1,6 +1,7 @@
 package io.github.nocomment1105.deepslatecutting.config;
 
 import com.moandjiezana.toml.Toml;
+import com.moandjiezana.toml.TomlWriter;
 import io.github.nocomment1105.deepslatecutting.DeepslateCutting;
 import net.fabricmc.loader.api.FabricLoader;
 import java.io.File;
@@ -10,12 +11,12 @@ import java.util.Objects;
 
 
 public class Config {
+    private final transient File file = FabricLoader.getInstance().getConfigDir().resolve("deepslatecutting.toml").toFile();
     public static Config instance;
-    private boolean smoothStuff;
+    public boolean smoothStuff;
     public Config(boolean b){
         this.smoothStuff = b;
-        File file = FabricLoader.getInstance().getConfigDir().resolve("deepslatecutting.toml").toFile();
-        if(file.exists() && file.isFile()) {
+        if (file.exists() && file.isFile()) {
             Toml toml = new Toml().read(file);
             this.smoothStuff = toml.getBoolean("smoothStuff");
         } else {
@@ -24,8 +25,16 @@ public class Config {
                 Files.copy(Objects.requireNonNull(Config.class.getResourceAsStream("/data/deepslatecutting/default_config.toml")), file.toPath());
             } catch (IOException e) {
                 DeepslateCutting.LOGGER.warn("Unable to create config file for DeepslateCutting");
+                e.printStackTrace();
             }
        }
     }
-    public boolean getSmoothStuff() {return smoothStuff;}
+    public void save() {
+        TomlWriter writer = new TomlWriter();
+        try {
+            writer.write(this, file);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
