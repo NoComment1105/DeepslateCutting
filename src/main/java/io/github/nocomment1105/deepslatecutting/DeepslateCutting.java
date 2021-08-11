@@ -13,13 +13,14 @@ public class DeepslateCutting implements ModInitializer {
     public static final Logger LOGGER = LogManager.getLogger("Deepslate Cutting");
     @Override
     public void onInitialize() {
-        CONFIG = new Config(true);
-        var myValue = CONFIG.getSmoothStuff();
+        CONFIG = new Config(false);
+        var myValue = CONFIG.smoothStuff;
         if (myValue) {
             ModBlocks.registerBlocks();
             ModItems.registerItems();
             LOGGER.info("Loaded Config! Regular deepslate extras are ON");
-            LOGGER.info("If you are running a server, please tell your clients they need to enable extras too!");
+            LOGGER.warn("If you are running a server, please tell your clients they need to enable deepslate " +
+                    "extras to see the regular deepslate blocks!");
         } else {
             LOGGER.info("Loaded Config! Regular deepslate extras are OFF");
         }
