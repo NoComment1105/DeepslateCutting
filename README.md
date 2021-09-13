@@ -9,7 +9,7 @@
 #### Download Counts
 [![CurseForge downloads](http://cf.way2muchnoise.eu/full_504899_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/deepslatecutting)
 [![Github all releases](https://img.shields.io/github/downloads/NoComment1105/DeepslateCutting-fabric/total.svg?label=Downloads%20From%20GH)](https://gitHub.com/NoComment1105/Deepslate-fabric/releases/)
-[![Modrinth Downloads](https://img.shields.io/badge/dynamic/json?color=blue&label=Modrinth&query=downloads&url=https%3A%2F%2Fapi.modrinth.com%2Fapi%2Fv1%2Fmod%2FIiuFShHs)](https://www.modrinth.com/mod/deepslatecuttung)
+[![Modrinth Downloads](https://img.shields.io/badge/dynamic/json?color=blue&label=Modrinth&query=downloads&url=https%3A%2F%2Fapi.modrinth.com%2Fapi%2Fv1%2Fmod%2FIiuFShHs)](https://modrinth.com/mod/deepslatecutting)
 
 ![icon](./src/main/resources/assets/deepslatecutting/icon.png)
 
