@@ -25,9 +25,12 @@ repositories {
 	maven { url = 'https://maven.shedaniel.me/'}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	// for maybe-data
 	maven { url = 'https://jitpack.io'}
 =======
+=======
+>>>>>>> parent of 9287ce6 (Switch to jitpack for maybe-data (snapshot).)
 =======
 >>>>>>> parent of 9287ce6 (Switch to jitpack for maybe-data (snapshot).)
 	maven { url = 'https://maven.pkg.github.com/gniftygnome/maybe-data'
@@ -37,6 +40,9 @@ repositories {
 		}
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 9287ce6 (Switch to jitpack for maybe-data (snapshot).)
+=======
 >>>>>>> parent of 9287ce6 (Switch to jitpack for maybe-data (snapshot).)
 =======
 >>>>>>> parent of 9287ce6 (Switch to jitpack for maybe-data (snapshot).)
