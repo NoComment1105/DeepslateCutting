@@ -1,0 +1,23 @@
+{
+  "condition": {
+    "modid": "",
+    "item": "deepslatecutting:deepslate_stairs"
+  },
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "#  ",
+      "## ",
+      "###"
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:deepslate"
+      }
+    },
+    "result": {
+      "item": "deepslatecutting:deepslate_stairs",
+      "count": 4
+    }
+  }
+}
