@@ -1,0 +1,14 @@
+{
+  "condition": {
+    "modid": "",
+    "item": "deepslatecutting:deepslate_stairs"
+  },
+  "recipe": {
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+      "item": "minecraft:deepslate"
+    },
+    "result": "deepslatecutting:deepslate_stairs",
+    "count": 1
+  }
+}
