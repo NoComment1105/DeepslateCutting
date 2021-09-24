@@ -24,15 +24,21 @@ repositories {
 	maven { url = 'https://maven.terraformersmc.com/releases/'}
 	maven { url = 'https://maven.shedaniel.me/'}
 <<<<<<< HEAD
+<<<<<<< HEAD
 	// for maybe-data
 	maven { url = 'https://jitpack.io'}
 =======
+=======
+>>>>>>> parent of 9287ce6 (Switch to jitpack for maybe-data (snapshot).)
 	maven { url = 'https://maven.pkg.github.com/gniftygnome/maybe-data'
 		credentials {
 		    username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
 		    password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
 		}
 	}
+<<<<<<< HEAD
+>>>>>>> parent of 9287ce6 (Switch to jitpack for maybe-data (snapshot).)
+=======
 >>>>>>> parent of 9287ce6 (Switch to jitpack for maybe-data (snapshot).)
 }
 
