@@ -27,7 +27,7 @@ public abstract class MixinRecipeManager {
             Identifier id = iterator.next().getKey();
             // id.getPath().startsWith("extras") ignores recipes the "extras" recipe sub-directory.
             // That is then controlled by !CONFIG.getSmoothStuff() which checks the config value for true or false
-            if (id.getNamespace().equals(MOD_ID) && id.getPath().startsWith("extras") && !CONFIG.smoothStuff) {
+            if (id.getNamespace().equals(MOD_ID) && id.getPath().startsWith("conditional_recipes") && !CONFIG.smoothStuff) {
                 // simply removes the recipes.
                 iterator.remove();
             }
