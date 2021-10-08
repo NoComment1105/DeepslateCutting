@@ -1,2 +1,2 @@
-## Version 1.2.2
-* Fixes all the log spam there ever was :D
+## Version 1.3.0
+* Update to 21w40a
