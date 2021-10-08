@@ -1,8 +1,7 @@
 package io.github.nocomment1105.deepslatecutting;
 
 import io.github.nocomment1105.deepslatecutting.config.Config;
-import io.github.nocomment1105.deepslatecutting.registry.ModBlocks;
-import io.github.nocomment1105.deepslatecutting.registry.ModItems;
+import io.github.nocomment1105.deepslatecutting.registry.ModRegistry;
 import net.fabricmc.api.ModInitializer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -16,8 +15,7 @@ public class DeepslateCutting implements ModInitializer {
         CONFIG = new Config(false);
         var myValue = CONFIG.smoothStuff;
         if (myValue) {
-            ModBlocks.registerBlocks();
-            ModItems.registerItems();
+            ModRegistry.init();
             LOGGER.info("Loaded Config! Regular deepslate extras are ON");
             LOGGER.warn("If you are running a server, please tell your clients they need to enable deepslate " +
                     "extras to see the regular deepslate blocks!");
