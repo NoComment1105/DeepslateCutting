@@ -21,7 +21,7 @@ public class ModRegistry {
     public static final Block DEEPSLATE_STAIRS = registerBlock("deepslate_stairs",new DeepslateCuttingStairsBlock(COBBLED_DEEPSLATE_STAIRS
             .getDefaultState(), FabricBlockSettings.of(Material.STONE, MapColor.DEEPSLATE_GRAY).breakByTool(FabricToolTags.PICKAXES, 0)
             .requiresTool().strength(3.5f,6).sounds(BlockSoundGroup.DEEPSLATE)));
-    public static final Block DEEPSLATE_WALL = registerBlock("deepslate_slab", new WallBlock(FabricBlockSettings.of(Material.STONE,
+    public static final Block DEEPSLATE_WALL = registerBlock("deepslate_wall", new WallBlock(FabricBlockSettings.of(Material.STONE,
             MapColor.DEEPSLATE_GRAY).breakByTool(FabricToolTags.PICKAXES,0).requiresTool().strength(3.5f,6)
             .sounds(BlockSoundGroup.DEEPSLATE)));
 
@@ -29,7 +29,7 @@ public class ModRegistry {
             new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
     public static final BlockItem DEEPSLATE_STAIRS_ITEM = registerItem("deepslate_stairs", new BlockItem(ModRegistry.DEEPSLATE_STAIRS,
             new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
-    public static final BlockItem DEEPSLATE_WALL_ITEM = registerItem("deepslate_slab", new BlockItem(ModRegistry.DEEPSLATE_WALL,
+    public static final BlockItem DEEPSLATE_WALL_ITEM = registerItem("deepslate_wall", new BlockItem(ModRegistry.DEEPSLATE_WALL,
             new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
 
     private static Block registerBlock(String name, Block block) {
