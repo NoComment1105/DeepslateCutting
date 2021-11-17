@@ -8,8 +8,8 @@ plugins {
 	id 'com.github.johnrengelman.shadow' version '7.0.0'
 }
 
-sourceCompatibility = JavaVersion.VERSION_16
-targetCompatibility = JavaVersion.VERSION_16
+sourceCompatibility = JavaVersion.VERSION_17
+targetCompatibility = JavaVersion.VERSION_17
 
 archivesBaseName = project.archives_base_name + '-' + project.minecraft_version
 version = project.mod_version
@@ -25,7 +25,7 @@ repositories {
 	// for more information about repositories.
 	maven { url = 'https://maven.terraformersmc.com/releases/'}
 	maven { url = 'https://maven.shedaniel.me/'}
-	// for maybe-data
+	// for maybe-more-data
 	maven { url = 'https://jitpack.io'}
 }
 
@@ -70,7 +70,7 @@ tasks.withType(JavaCompile).configureEach {
 	it.options.encoding = 'UTF-8'
 
 	// Minecraft 1.17 (21w19a) upwards uses Java 16.
-	it.options.release.set(16)
+	it.options.release.set(17)
 }
 tasks {
 	build {

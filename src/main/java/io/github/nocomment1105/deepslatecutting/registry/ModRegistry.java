@@ -16,14 +16,12 @@ import static net.minecraft.block.Blocks.COBBLED_DEEPSLATE_STAIRS;
 
 public class ModRegistry {
     public static final Block DEEPSLATE_SLAB = registerBlock("deepslate_slab", new SlabBlock(FabricBlockSettings.of(Material.STONE,
-            MapColor.DEEPSLATE_GRAY).breakByTool(FabricToolTags.PICKAXES, 0).requiresTool()
-            .strength(3.5f, 6).sounds(BlockSoundGroup.DEEPSLATE)));
+            MapColor.DEEPSLATE_GRAY).requiresTool().strength(3.5f, 6).sounds(BlockSoundGroup.DEEPSLATE)));
     public static final Block DEEPSLATE_STAIRS = registerBlock("deepslate_stairs",new DeepslateCuttingStairsBlock(COBBLED_DEEPSLATE_STAIRS
-            .getDefaultState(), FabricBlockSettings.of(Material.STONE, MapColor.DEEPSLATE_GRAY).breakByTool(FabricToolTags.PICKAXES, 0)
-            .requiresTool().strength(3.5f,6).sounds(BlockSoundGroup.DEEPSLATE)));
+            .getDefaultState(), FabricBlockSettings.of(Material.STONE, MapColor.DEEPSLATE_GRAY).requiresTool().strength(
+                    3.5f,6).sounds(BlockSoundGroup.DEEPSLATE)));
     public static final Block DEEPSLATE_WALL = registerBlock("deepslate_wall", new WallBlock(FabricBlockSettings.of(Material.STONE,
-            MapColor.DEEPSLATE_GRAY).breakByTool(FabricToolTags.PICKAXES,0).requiresTool().strength(3.5f,6)
-            .sounds(BlockSoundGroup.DEEPSLATE)));
+            MapColor.DEEPSLATE_GRAY).requiresTool().strength(3.5f,6).sounds(BlockSoundGroup.DEEPSLATE)));
 
     public static final BlockItem DEEPSLATE_SLAB_ITEM = registerItem("deepslate_slab", new BlockItem(ModRegistry.
             DEEPSLATE_SLAB, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));

@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "deepslatecutting:deepslate_slab",
+    "deepslatecutting:deepslate_stairs",
+    "deepslatecutting:deepslate_wall"
+  ]
+}
