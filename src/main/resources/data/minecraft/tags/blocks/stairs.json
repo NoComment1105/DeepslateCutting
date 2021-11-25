@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "deepslatecutting:deepslate_stairs"
+    {
+      "id": "deepslatecutting:deepslate_stairs",
+      "required": false
+    }
   ]
 }

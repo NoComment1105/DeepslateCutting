@@ -17,9 +17,8 @@ import static io.github.nocomment1105.deepslatecutting.DeepslateCutting.*;
 
 @Mixin(RecipeManager.class)
 public abstract class MixinRecipeManager {
-    // Mixin to RecipeManager#apply to disable the recipes within the "extras" directory
-    @Inject(method = "apply", at = @At("HEAD"))
-    // TODO wtf does any of this mean
+    // Mixin to RecipeManager#apply to disable the recipes within the "conditional_recipes" directory
+    @Inject(method = "apply*", at = @At("HEAD"))
     private void apply(Map<Identifier, JsonElement> map, ResourceManager resourceManager, Profiler profiler, CallbackInfo callbackInfo) {
         Iterator<Map.Entry<Identifier, JsonElement>> iterator = map.entrySet().iterator();
 

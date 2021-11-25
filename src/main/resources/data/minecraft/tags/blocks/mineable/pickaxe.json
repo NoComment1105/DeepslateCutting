@@ -1,8 +1,17 @@
 {
   "replace": false,
   "values": [
-    "deepslatecutting:deepslate_slab",
-    "deepslatecutting:deepslate_stairs",
-    "deepslatecutting:deepslate_wall"
+    {
+      "id": "deepslatecutting:deepslate_slab",
+      "required": false
+    },
+    {
+      "id": "deepslatecutting:deepslate_stairs",
+      "required": false
+    },
+    {
+      "id": "deepslatecutting:deepslate_wall",
+      "required": false
+    }
   ]
 }
