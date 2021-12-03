@@ -1,11 +1,13 @@
+//file:noinspection GroovyAssignabilityCheck
 import com.modrinth.minotaur.TaskModrinthUpload
 
 plugins {
 	id 'fabric-loom' version '0.10.+'
 	id 'maven-publish'
-	id 'com.modrinth.minotaur' version '1.2.1'
+	id 'com.modrinth.minotaur' version '1.1.0'
 	id 'com.matthewprenger.cursegradle' version '1.4.0'
-	id 'com.github.johnrengelman.shadow' version '7.0.0'
+	id 'com.github.johnrengelman.shadow' version '7.1.0'
+	id "io.github.juuxel.loom-quiltflower-mini" version "1.1.0"
 }
 
 sourceCompatibility = JavaVersion.VERSION_17
@@ -15,7 +17,7 @@ archivesBaseName = project.archives_base_name + '-' + project.minecraft_version
 version = project.mod_version
 group = project.maven_group
 
-boolean preRelease = true
+boolean preRelease = false
 
 repositories {
 	// Add repositories to retrieve artifacts from in here.
@@ -106,7 +108,8 @@ publishing {
 		// The repositories here will be used for publishing your artifact, not for
 		// retrieving dependencies.
 	}
-task modrinth(type: TaskModrinthUpload, dependsOn: jar) {
+}
+task modrinth(type: TaskModrinthUpload, dependsOn: remapJar) {
 	onlyIf {
 		System.getenv('MODRINTH_TOKEN')
 	}
@@ -114,11 +117,12 @@ task modrinth(type: TaskModrinthUpload, dependsOn: jar) {
 	projectId = 'IiuFShHs'
 	versionNumber = "DeepslateCutting $project.version"
 	versionName = "[$project.minecraft_version] v$project.version"
-	versionType = preRelease ? 'BETA' : 'RELEASE'
-	uploadFile = jar
+	releaseType = preRelease ? 'BETA' : 'RELEASE'
+	uploadFile = remapJar
 	addGameVersion("$project.minecraft_version")
 	addLoader('fabric')
 }
+
 def CURSEFORGE_TOKEN = System.getenv('CURSEFORGE_TOKEN')
 
 curseforge {
@@ -134,15 +138,18 @@ curseforge {
 		addGameVersion "1.18-Snapshot"
 		addGameVersion 'Fabric'
 
-		mainArtifact(file("${project.buildDir}/libs/${archivesBaseName}-${version}.jar")) {
+		mainArtifact(remapJar) {
 			displayName = "[$project.minecraft_version] v$project.version"
 		}
 		afterEvaluate {
-			uploadTask.dependsOn(jar)
+			uploadTask.dependsOn(remapJar)
 		}
 	}
 	options {
 		forgeGradleIntegration = false
 	}
 }
+
+quiltflower {
+	addToRuntimeClasspath.set(true)
 }
