@@ -4,10 +4,10 @@ import com.modrinth.minotaur.TaskModrinthUpload
 plugins {
 	id 'fabric-loom' version '0.10.+'
 	id 'maven-publish'
-	id 'com.modrinth.minotaur' version '1.1.0'
+	id 'com.modrinth.minotaur' version '1.2.1'
 	id 'com.matthewprenger.cursegradle' version '1.4.0'
 	id 'com.github.johnrengelman.shadow' version '7.1.0'
-	id "io.github.juuxel.loom-quiltflower-mini" version "1.1.0"
+	id "io.github.juuxel.loom-quiltflower-mini" version "1.2.1"
 }
 
 sourceCompatibility = JavaVersion.VERSION_17
@@ -117,7 +117,7 @@ task modrinth(type: TaskModrinthUpload, dependsOn: remapJar) {
 	projectId = 'IiuFShHs'
 	versionNumber = "DeepslateCutting $project.version"
 	versionName = "[$project.minecraft_version] v$project.version"
-	releaseType = preRelease ? 'beta' : 'release'
+	versionType = preRelease ? 'BETA' : 'RELEASE'
 	uploadFile = remapJar
 	addGameVersion("$project.minecraft_version")
 	addLoader('fabric')
@@ -135,7 +135,7 @@ curseforge {
 		relations {
 			requiredDependency 'fabric-api'
 		}
-		addGameVersion "1.18"
+		addGameVersion "$project.minecraft_version"
 		addGameVersion 'Fabric'
 
 		mainArtifact(remapJar) {
