@@ -2,7 +2,6 @@ package io.github.nocomment1105.deepslatecutting.registry;
 
 import io.github.nocomment1105.deepslatecutting.blocks.DeepslateCuttingStairsBlock;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
