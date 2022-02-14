@@ -36,9 +36,7 @@
       "io.github.nocomment1105.deepslatecutting.DeepslateCuttingModMenu"
     ]
   },
-  "mixins": [
-    "deepslatecutting.mixins.json"
-  ],
+  "mixins": [  ],
 
   "depends": {
     "fabricloader": ">=0.12.10",
