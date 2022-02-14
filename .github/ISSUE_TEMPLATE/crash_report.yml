@@ -8,7 +8,7 @@ body:
       value: |
         Thanks for taking the time to fill out this crash report!
 
-        Before continuing to make the issue, please make sure there are no similar issues on [the issue tracker](https://github.com/IrisShaders/Iris/issues). If there are, consider contributing your information in there instead!
+        Before continuing to make the issue, please make sure there are no similar issues on [the issue tracker](https://github.com/NoComment1105/DeepslateCutting-fabric/issues). If there are, consider contributing your information in there instead!
 
         Also, make sure you are using the latest version of the mod! If not, try updating to see if it resolves your issue.
   - type: input

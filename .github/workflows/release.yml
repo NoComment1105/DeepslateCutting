@@ -1,4 +1,4 @@
-name: release-artifacts
+name: Release
 
 on:
   release:
@@ -8,20 +8,29 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout sources
         uses: actions/checkout@v2
+
       - name: Set up JDK 17
         uses: actions/setup-java@v2
+
         with:
           distribution: 'temurin'
           java-version: 17
+
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
-      - name: Release Artifacts
-        run: ./gradlew build
+
+      - name: Build Artifacts
+        uses: gradle/gradle-build-action@v2
+        with:
+          arguments: build --stacktrace
+
       - name: Upload artifacts GitHub
         uses: AButler/upload-release-assets@v2.0
+
         with:
-          files: 'build/libs/*.jar;!build/libs/*-dev.jar;!build/libs/*-all.jar;LICENSE'
+          files: 'build/libs/*.jar'
           repo-token: ${{ secrets.GITHUB_TOKEN }}
