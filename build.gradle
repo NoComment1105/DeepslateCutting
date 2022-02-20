@@ -16,7 +16,7 @@ archivesBaseName = project.archives_base_name + '-' + project.minecraft_version
 version = project.mod_version
 group = project.maven_group
 
-boolean preRelease = false
+boolean preRelease = true
 
 repositories {
 	// Add repositories to retrieve artifacts from in here.
@@ -79,10 +79,10 @@ jar {
 }
 
 processResources {
-	inputs.property "version", project.version
+	inputs.property 'version', project.version
 
-	filesMatching("fabric.mod.json") {
-		expand "version": project.version
+	filesMatching('fabric.mod.json') {
+		expand 'version': project.version
 	}
 }
 
@@ -100,7 +100,7 @@ publishing {
 }
 
 runClient {
-	jvmArgs('-Dmixin.debug.export=true')
+	jvmArgs('-Dmixin.debug.export=true', '-Xmx1280m')
 }
 
 quiltflower {
@@ -133,7 +133,7 @@ curseforge {
 		relations {
 			requiredDependency 'fabric-api'
 		}
-		addGameVersion "$project.minecraft_version"
+		addGameVersion "1.18-SNAPSHOT"
 		addGameVersion 'Fabric'
 
 		mainArtifact(remapJar) {

@@ -12,7 +12,6 @@ import java.util.Objects;
 
 public class Config {
     private final transient File file = FabricLoader.getInstance().getConfigDir().resolve("deepslatecutting.toml").toFile();
-    public static Config instance;
     public boolean smoothStuff;
     public Config(boolean b){
         this.smoothStuff = b;
