@@ -22,8 +22,8 @@ This mod allows regular deepslate to be put into the stone cutter and made into 
 
 ### The Developers
 
-| Author   | Role   | Links   |
-|:---------|:-------|:--------|
+| Author        | Role     | Links                                                                                                  |
+|:--------------|:---------|:-------------------------------------------------------------------------------------------------------|
 | NoComment1105 | Mod Lead | [Contributions](https://github.com/NoComment1105/DeepslateCutting-fabric/commits?author=NoComment1105) |
 
 ### Versioning
@@ -41,4 +41,4 @@ If you have discovered an issue with my mod, please do not hesitate to ask anyth
 
 ### License
 DeepslateCutting is licensed under GNU LGPLv3, which is a free and open-source license. If you want to know more, poke 
-your nose in the [license file](https://github.com/NoComment1105/DeepslateCutting/blob/1.17.x/main/LICENSE)
+your nose in the [license file](https://github.com/NoComment1105/DeepslateCutting-fabric/blob/1.17.x/main/LICENSE)
