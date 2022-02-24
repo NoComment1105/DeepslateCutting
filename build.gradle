@@ -12,11 +12,11 @@ plugins {
 
 def targetJavaVersion = 17
 
-archivesBaseName = project.archives_base_name + '-' + project.minecraft_version
+boolean preRelease = true
+
+archivesBaseName = preRelease ? project.archives_base_name + '-' + project.minecraft_version + '-SNAPSHOT' : project.archives_base_name + '-' + project.minecraft_version
 version = project.mod_version
 group = project.maven_group
-
-boolean preRelease = true
 
 repositories {
 	// Add repositories to retrieve artifacts from in here.
