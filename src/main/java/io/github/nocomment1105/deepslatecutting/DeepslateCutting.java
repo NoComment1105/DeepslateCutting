@@ -13,6 +13,7 @@ public class DeepslateCutting implements ModInitializer {
     public static final String MOD_ID = "deepslatecutting";
     public static Config CONFIG;
     public static final Logger LOGGER = LogManager.getLogger("Deepslate Cutting");
+
     @Override
     public void onInitialize() {
         CONFIG = new Config(false);

@@ -24,14 +24,14 @@ public class ModRegistry {
     public static final Block DEEPSLATE_STAIRS = registerBlock(
             "deepslate_stairs", new DeepslateCuttingStairsBlock(COBBLED_DEEPSLATE_STAIRS.getDefaultState(),
                     FabricBlockSettings.of(Material.STONE, MapColor.DEEPSLATE_GRAY)
-                            .requiresTool().strength(3.5f,6)
+                            .requiresTool().strength(3.5f, 6)
                             .sounds(BlockSoundGroup.DEEPSLATE)
             )
     );
     public static final Block DEEPSLATE_WALL = registerBlock(
             "deepslate_wall", new WallBlock(FabricBlockSettings.of(Material.STONE, MapColor.DEEPSLATE_GRAY)
                     .requiresTool()
-                    .strength(3.5f,6)
+                    .strength(3.5f, 6)
                     .sounds(BlockSoundGroup.DEEPSLATE)
             )
     );
@@ -45,7 +45,7 @@ public class ModRegistry {
     );
     public static final BlockItem DEEPSLATE_STAIRS_ITEM = registerItem(
             "deepslate_stairs", new BlockItem(
-                ModRegistry.DEEPSLATE_STAIRS,
+                    ModRegistry.DEEPSLATE_STAIRS,
                     new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)
             )
     );

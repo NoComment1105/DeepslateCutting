@@ -8,7 +8,9 @@ import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 
 public final class Localization {
-    /** e.g. keyString("title", "config") -> "title.deepslatecutting.config") */
+    /**
+     * e.g. keyString("title", "config") -> "title.deepslatecutting.config")
+     */
     public static String translationKey(String domain, String path) {
         return domain + "." + DeepslateCutting.MOD_ID + "." + path;
     }
