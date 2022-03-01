@@ -125,7 +125,7 @@ curseforge {
 		relations {
 			requiredDependency 'fabric-api'
 		}
-		addGameVersion "1.18-SNAPSHOT"
+		addGameVersion "1.18.2"
 		addGameVersion 'Fabric'
 
 		mainArtifact(remapJar) {
