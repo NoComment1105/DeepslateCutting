@@ -1,6 +1,5 @@
 package io.github.nocomment1105.deepslatecutting.registry;
 
-import io.github.nocomment1105.deepslatecutting.blocks.DeepslateCuttingStairsBlock;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
@@ -22,7 +21,7 @@ public class ModRegistry {
             )
     );
     public static final Block DEEPSLATE_STAIRS = registerBlock(
-            "deepslate_stairs", new DeepslateCuttingStairsBlock(COBBLED_DEEPSLATE_STAIRS.getDefaultState(),
+            "deepslate_stairs", new StairsBlock(COBBLED_DEEPSLATE_STAIRS.getDefaultState(),
                     FabricBlockSettings.of(Material.STONE, MapColor.DEEPSLATE_GRAY)
                             .requiresTool().strength(3.5f, 6)
                             .sounds(BlockSoundGroup.DEEPSLATE)

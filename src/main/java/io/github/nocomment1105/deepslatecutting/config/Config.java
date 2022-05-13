@@ -10,13 +10,12 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.util.Objects;
 
-
 public class Config {
     private final transient File file = FabricLoader.getInstance().getConfigDir().resolve("deepslatecutting.toml").toFile();
     public boolean smoothStuff;
 
-    public Config(boolean b) {
-        this.smoothStuff = b;
+    public Config(boolean smoothStuff) {
+        this.smoothStuff = smoothStuff;
         if (file.exists() && file.isFile()) {
             Toml toml = new Toml().read(file);
             this.smoothStuff = toml.getBoolean("smoothStuff");
