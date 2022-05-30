@@ -5,8 +5,7 @@ import com.terraformersmc.modmenu.api.ModMenuApi;
 import me.shedaniel.clothconfig2.api.ConfigBuilder;
 import me.shedaniel.clothconfig2.api.ConfigEntryBuilder;
 import net.minecraft.client.gui.screen.Screen;
-
-import static io.github.nocomment1105.deepslatecutting.util.Localization.localized;
+import net.minecraft.text.Text;
 
 public class DeepslateCuttingModMenu implements ModMenuApi {
     @Override
@@ -17,14 +16,14 @@ public class DeepslateCuttingModMenu implements ModMenuApi {
     private static Screen genConfig(Screen parent) {
         ConfigBuilder builder = ConfigBuilder.create()
                 .setParentScreen(parent)
-                .setTitle(localized("config", "title"))
+                .setTitle(Text.create("Configure DeepslateCutting"))
                 .setSavingRunnable(DeepslateCutting.CONFIG::save);
         ConfigEntryBuilder entryBuilder = builder.entryBuilder();
 
-        builder.getOrCreateCategory(localized("config", "category.general"))
+        builder.getOrCreateCategory(Text.create("General"))
                 .addEntry(entryBuilder
                         .startBooleanToggle(
-                                localized("config", "toggle_deepslate_extras"),
+                                Text.create("Toggle Deepslate Extras"),
                                 DeepslateCutting.CONFIG.smoothStuff
                         )
                         .requireRestart()
