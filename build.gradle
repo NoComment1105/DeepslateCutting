@@ -107,7 +107,7 @@ modrinth {
 	versionType = preRelease ? 'beta' : 'release'
 	uploadFile = remapJar
 	gameVersions = ["$project.minecraft_version"]
-	loaders = ['fabric']
+	loaders = ['fabric', 'Quilt']
 	dependencies = [
 			new ModDependency('P7dR8mSH', 'required'),
 			new ModDependency('mOgUt4GM', 'optional')
@@ -125,9 +125,11 @@ curseforge {
 		changelog = file('changelog.md')
 		relations {
 			requiredDependency 'fabric-api'
+			optionalDependency 'modmenu'
 		}
-		addGameVersion "1.18.2"
+		addGameVersion '1.18.2'
 		addGameVersion 'Fabric'
+		addGameVersion 'Quilt'
 
 		mainArtifact(remapJar) {
 			displayName = "[$project.minecraft_version] v$project.version"
