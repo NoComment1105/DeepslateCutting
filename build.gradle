@@ -59,7 +59,7 @@ java {
 
 }
 
-tasks.withType(JavaCompile).configureEach {
+tasks.withType(JavaCompile).forEach {
 	it.options.encoding('UTF-8')
 	it.options.deprecation(true)
 	it.options.incremental(true)
