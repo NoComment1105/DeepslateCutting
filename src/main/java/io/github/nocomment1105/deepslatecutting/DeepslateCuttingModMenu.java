@@ -16,14 +16,14 @@ public class DeepslateCuttingModMenu implements ModMenuApi {
     private static Screen genConfig(Screen parent) {
         ConfigBuilder builder = ConfigBuilder.create()
                 .setParentScreen(parent)
-                .setTitle(Text.createFormatted("config.deepslatecutting.title"))
+                .setTitle(Text.translatable("config.deepslatecutting.title"))
                 .setSavingRunnable(DeepslateCutting.CONFIG::save);
         ConfigEntryBuilder entryBuilder = builder.entryBuilder();
 
-        builder.getOrCreateCategory(Text.createFormatted("config.deepslatecutting.general"))
+        builder.getOrCreateCategory(Text.translatable("config.deepslatecutting.general"))
                 .addEntry(entryBuilder
                         .startBooleanToggle(
-                                Text.createFormatted("config.deepslatecutting.toggle_deepslate_extras"),
+                                Text.translatable("config.deepslatecutting.toggle_deepslate_extras"),
                                 DeepslateCutting.CONFIG.smoothStuff
                         )
                         .requireRestart()
