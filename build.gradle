@@ -7,7 +7,7 @@ plugins {
 	id('com.modrinth.minotaur') version('2.+')
 	id('com.matthewprenger.cursegradle') version('1.+')
 	id('io.github.juuxel.loom-quiltflower') version('1.+')
-	id('org.quiltmc.quilt-mappings-on-loom') version('4.+')
+	id('org.quiltmc.quilt-mappings-on-loom') version('4.2.0')
 }
 
 def targetJavaVersion = 17
@@ -73,6 +73,11 @@ jar {
 	}
 }
 
+wrapper {
+	gradleVersion("7.5.1")
+	distributionType(Wrapper.DistributionType.BIN)
+}
+
 processResources {
 	inputs.property 'version', project.version
 
@@ -93,7 +98,7 @@ publishing {
 }
 
 runClient {
-	jvmArgs('-Dmixin.debug.export=true', '-Xmx1280m')
+	jvmArgs('-Dmixin.debug.export=true', '-Xmx1536m')
 }
 
 quiltflower {
