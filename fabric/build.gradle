@@ -16,12 +16,10 @@ repositories {
 dependencies {
     modImplementation "net.fabricmc:fabric-loader:${project.fabric_loader_version}"
     modApi "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-    modApi "dev.architectury:architectury-fabric:${rootProject.architectury_version}"
 
     //Mod Menu for allowing easier config access
     modImplementation("com.terraformersmc:modmenu:${project.modmenu_version}")  {
-        exclude group: "net.fabricmc"
-        exclude group: "net.fabricmc.fabric-api"
+        exclude(group: 'net.fabricmc.fabric-api')
     }
 
     // maybe-data for conditional recipe loading

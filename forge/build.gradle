@@ -8,7 +8,6 @@ configurations {
 
 dependencies {
     forge "net.minecraftforge:forge:$rootProject.minecraft_version-$rootProject.forge_version"
-    modApi "dev.architectury:architectury-forge:$rootProject.architectury_version"
 
     shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
 }

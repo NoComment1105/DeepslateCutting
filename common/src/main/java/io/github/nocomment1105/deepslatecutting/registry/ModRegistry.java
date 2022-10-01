@@ -18,7 +18,7 @@ public class ModRegistry {
             )
     );
     public static final Block DEEPSLATE_STAIRS = registerBlock(
-            "deepslate_stairs", new StairsBlock(
+            "deepslate_stairs", new StairBlock(
                     COBBLED_DEEPSLATE_STAIRS.getDefaultState(),
                     AbstractBlock.Settings.copy(COBBLED_DEEPSLATE_STAIRS)
             )
@@ -59,5 +59,11 @@ public class ModRegistry {
     }
 
     public static void init() {
+    }
+
+    public static class StairBlock extends StairsBlock {
+        public StairBlock(BlockState blockState, Settings settings) {
+            super(blockState, settings);
+        }
     }
 }
