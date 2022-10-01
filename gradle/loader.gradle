@@ -1,0 +1,40 @@
+apply plugin: "com.github.johnrengelman.shadow"
+
+architectury.platformSetupLoomIde()
+
+configurations {
+    common
+    shadowCommon // Don't use shadow from the shadow plugin because we don't want IDEA to index this.
+    compileClasspath.extendsFrom common
+    runtimeClasspath.extendsFrom common
+}
+
+dependencies {
+    common(project(path: ":common", configuration: "namedElements")) { transitive false }
+}
+
+shadowJar {
+    configurations = [project.configurations.shadowCommon]
+    classifier "dev-shadow"
+}
+
+remapJar {
+    inputFile.set shadowJar.archiveFile
+    dependsOn shadowJar
+    classifier null
+}
+
+jar.classifier "dev"
+
+sourcesJar {
+    duplicatesStrategy(DuplicatesStrategy.WARN)
+    def commonSources = project(":common").sourcesJar
+    dependsOn commonSources
+    from commonSources.archiveFile.map { zipTree(it) }
+}
+
+components.java {
+    withVariantsFromConfiguration(project.configurations.shadowRuntimeElements) {
+        skip()
+    }
+}

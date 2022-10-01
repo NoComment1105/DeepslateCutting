@@ -1,0 +1,51 @@
+apply from: "../gradle/loader.gradle"
+
+architectury.fabric()
+
+configurations {
+    developmentFabric.extendsFrom common
+}
+
+repositories {
+    maven {
+        url = 'https://maven.terraformersmc.com/releases/'
+        content { includeGroup "com.terraformersmc" }
+    }
+}
+
+dependencies {
+    modImplementation "net.fabricmc:fabric-loader:${project.fabric_loader_version}"
+    modApi "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+    modApi "dev.architectury:architectury-fabric:${rootProject.architectury_version}"
+
+    //Mod Menu for allowing easier config access
+    modImplementation("com.terraformersmc:modmenu:${project.modmenu_version}")  {
+        exclude group: "net.fabricmc"
+        exclude group: "net.fabricmc.fabric-api"
+    }
+
+    // maybe-data for conditional recipe loading
+    modImplementation "com.github.NoComment1105:maybe-data:${project.maybedata_version}"
+    include "com.github.NoComment1105:maybe-data:${project.maybedata_version}"
+
+    // Cloth for config screen setup library
+    modApi("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_version}") {
+        exclude(group: 'net.fabricmc.fabric-api')
+    }
+
+    // Use TOML for mod config
+    implementation(include("com.moandjiezana.toml:toml4j:${project.toml_version}"))
+
+    shadowCommon(project(path: ":common", configuration: "transformProductionFabric")) { transitive false }
+}
+
+processResources {
+    inputs.property "version", project.version
+    filesMatching("fabric.mod.json") {
+        expand "version": project.version
+    }
+}
+
+publishing.publications {
+    mavenFabric(MavenPublication) from components.java
+}

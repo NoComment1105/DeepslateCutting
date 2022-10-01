@@ -11,7 +11,7 @@
 [![Github all releases](https://img.shields.io/github/downloads/NoComment1105/DeepslateCutting-fabric/total.svg?label=Downloads%20From%20GH)](https://gitHub.com/NoComment1105/Deepslate-fabric/releases/)
 [![Modrinth Downloads](https://img.shields.io/badge/dynamic/json?color=blue&label=Modrinth&query=downloads&url=https%3A%2F%2Fapi.modrinth.com%2Fapi%2Fv1%2Fmod%2FIiuFShHs)](https://modrinth.com/mod/deepslatecutting)
 
-![icon](./src/main/resources/assets/deepslatecutting/icon.png)
+![icon](fabric/src/main/resources/assets/deepslatecutting/icon.png)
 
 ### What is the purpose of this Mod?
 This mod allows regular deepslate to be put into the stone cutter and made into the various stone cuttable items

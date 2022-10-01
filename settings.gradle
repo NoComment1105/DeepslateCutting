@@ -1,6 +1,10 @@
 pluginManagement {
     repositories {
         maven {
+            name 'Architectury'
+            url 'https://maven.architectury.dev/'
+        }
+        maven {
             name 'Quilt'
             url 'https://maven.quiltmc.org/repository/release'
         }
@@ -8,7 +12,17 @@ pluginManagement {
             name 'Fabric'
             url 'https://maven.fabricmc.net/'
         }
+        maven {
+            name 'Forge'
+            url 'https://maven.minecraftforge.net/'
+        }
         gradlePluginPortal()
+        mavenCentral()
     }
 }
-rootProject.name = 'DeepslateCutting'
+
+include("common")
+include("fabric")
+include("forge")
+
+//rootProject.name = 'DeepslateCutting'

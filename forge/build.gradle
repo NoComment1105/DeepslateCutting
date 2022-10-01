@@ -1,0 +1,40 @@
+apply from: "../gradle/loader.gradle"
+
+architectury.forge()
+
+configurations {
+    developmentForge.extendsFrom common
+}
+
+dependencies {
+    forge "net.minecraftforge:forge:$rootProject.minecraft_version-$rootProject.forge_version"
+    modApi "dev.architectury:architectury-forge:$rootProject.architectury_version"
+
+    shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
+}
+
+processResources {
+    inputs.property "version", project.version
+
+    filesMatching("META-INF/mods.toml") {
+        expand "version": project.version
+    }
+}
+
+tasks.withType(processResources.class) {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
+loom {
+    forge {
+        launches {
+            data {
+                arg "--existing", file("src/main/resources").absolutePath
+            }
+        }
+    }
+}
+
+publishing.publications {
+    mavenForge(MavenPublication) from components.java
+}

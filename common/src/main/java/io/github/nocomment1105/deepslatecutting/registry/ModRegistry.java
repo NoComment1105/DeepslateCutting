@@ -1,37 +1,31 @@
 package io.github.nocomment1105.deepslatecutting.registry;
 
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import io.github.nocomment1105.deepslatecutting.DeepslateCuttingMain;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
-import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
-import static io.github.nocomment1105.deepslatecutting.DeepslateCutting.MOD_ID;
-import static net.minecraft.block.Blocks.COBBLED_DEEPSLATE_STAIRS;
+import static net.minecraft.block.Blocks.*;
 
+@SuppressWarnings("unused")
 public class ModRegistry {
     public static final Block DEEPSLATE_SLAB = registerBlock(
-            "deepslate_slab", new SlabBlock(FabricBlockSettings.of(Material.STONE, MapColor.DEEPSLATE_GRAY)
-                    .requiresTool()
-                    .strength(3.5f, 6)
-                    .sounds(BlockSoundGroup.DEEPSLATE)
+            "deepslate_slab", new SlabBlock(
+                    AbstractBlock.Settings.copy(COBBLED_DEEPSLATE_SLAB)
             )
     );
     public static final Block DEEPSLATE_STAIRS = registerBlock(
-            "deepslate_stairs", new StairsBlock(COBBLED_DEEPSLATE_STAIRS.getDefaultState(),
-                    FabricBlockSettings.of(Material.STONE, MapColor.DEEPSLATE_GRAY)
-                            .requiresTool().strength(3.5f, 6)
-                            .sounds(BlockSoundGroup.DEEPSLATE)
+            "deepslate_stairs", new StairsBlock(
+                    COBBLED_DEEPSLATE_STAIRS.getDefaultState(),
+                    AbstractBlock.Settings.copy(COBBLED_DEEPSLATE_STAIRS)
             )
     );
     public static final Block DEEPSLATE_WALL = registerBlock(
-            "deepslate_wall", new WallBlock(FabricBlockSettings.of(Material.STONE, MapColor.DEEPSLATE_GRAY)
-                    .requiresTool()
-                    .strength(3.5f, 6)
-                    .sounds(BlockSoundGroup.DEEPSLATE)
+            "deepslate_wall", new WallBlock(
+                    AbstractBlock.Settings.copy(COBBLED_DEEPSLATE_WALL)
             )
     );
 
@@ -57,12 +51,13 @@ public class ModRegistry {
 
 
     private static Block registerBlock(String name, Block block) {
-        return Registry.register(Registry.BLOCK, new Identifier(MOD_ID, name), block);
+        return Registry.register(Registry.BLOCK, new Identifier(DeepslateCuttingMain.MOD_ID, name), block);
     }
 
     private static BlockItem registerItem(String name, BlockItem item) {
-        return Registry.register(Registry.ITEM, new Identifier(MOD_ID, name), item);
+        return Registry.register(Registry.ITEM, new Identifier(DeepslateCuttingMain.MOD_ID, name), item);
     }
 
-    public static void init() { }
+    public static void init() {
+    }
 }
