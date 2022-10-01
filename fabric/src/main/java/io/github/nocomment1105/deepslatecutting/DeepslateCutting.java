@@ -6,14 +6,25 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.loader.api.FabricLoader;
 
+import java.io.IOException;
+import java.nio.file.Path;
+
 public class DeepslateCutting implements ModInitializer {
-    public static Config CONFIG;
+    public static Config config;
+    public static final Path configPath = FabricLoader.getInstance().getConfigDir().resolve("deepslatecutting.properties");
 
     @Override
     public void onInitialize() {
-        CONFIG = new Config(false);
-        boolean enableExtras = CONFIG.smoothStuff;
-        if (enableExtras) {
+        config = new Config(configPath);
+
+        try {
+            config.init();
+        } catch (IOException e) {
+            DeepslateCuttingMain.LOGGER.error("Failed to initialise DeepslateCutting configuration, default values will be used instead");
+            DeepslateCuttingMain.LOGGER.error("", e);
+        }
+
+        if (config.areExtrasEnabled()) {
             ModRegistry.init();
             DeepslateCuttingMain.LOGGER.info("Loaded Config! Regular deepslate extras are ON");
             if (FabricLoader.getInstance().getEnvironmentType() == EnvType.SERVER) {
