@@ -23,6 +23,7 @@ This mod allows regular deepslate to be put into the stone cutter and made into 
 ### Versioning
 This mod is >= 1.17 at it's oldest. I am **NOT** going to back-port this mod to any older versions
 I will try my hardest to update this mod, in its latest release at the time, within a week the next version
+
 ----
 
 ### Issues
