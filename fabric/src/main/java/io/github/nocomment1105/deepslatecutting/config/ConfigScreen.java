@@ -19,7 +19,6 @@ public class ConfigScreen extends GameOptionsScreen {
     private final Screen parent;
     private ButtonListWidget list;
 
-    public Consumer<ButtonWidget> resetConsumer;
     private final BooleanConfigOption extrasOption = new BooleanConfigOption("toggle_deepslate_extras", DeepslateCutting.config.areExtrasEnabled());
 
     public ConfigScreen(Screen parent) {
@@ -38,7 +37,6 @@ public class ConfigScreen extends GameOptionsScreen {
         this.list = new ButtonListWidget(client, width, height, 32, this.height - 32, 25);
         this.list.addSingleOptionEntry(extrasOption.asOption());
         this.addSelectableChild(this.list);
-        //this.resetConsumer = button -> this.init(this.client, this.client.getWindow().getScaledWidth(), this.client.getWindow().getScaledHeight());
 
         this.addDrawableChild(new ButtonWidget(this.width / 2 - 100, this.height - 27, 200, 20, ScreenTexts.DONE,
                 btn -> {
