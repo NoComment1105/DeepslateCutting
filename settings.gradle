@@ -25,4 +25,4 @@ include("common")
 include("fabric")
 include("forge")
 
-//rootProject.name = 'DeepslateCutting'
+rootProject.name = 'DeepslateCutting'

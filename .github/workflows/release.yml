@@ -28,9 +28,16 @@ jobs:
         with:
           arguments: build --stacktrace
 
-      - name: Upload artifacts GitHub
+      - name: Upload Fabric artifacts GitHub
         uses: AButler/upload-release-assets@v2.0
 
         with:
-          files: 'build/libs/*.jar;!build/libs/*-dev.jar'
+          files: 'fabric/build/libs/*.jar;!forge/build/libs/*-dev.jar'
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload Forge artifacts GitHub
+        uses: AButler/upload-release-assets@v2.0
+
+        with:
+          files: 'forge/build/libs/*.jar;!forge/build/libs/*-dev.jar'
           repo-token: ${{ secrets.GITHUB_TOKEN }}
