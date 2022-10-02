@@ -26,11 +26,6 @@ dependencies {
     // maybe-data for conditional recipe loading
     include modImplementation("com.github.NoComment1105:maybe-data:${project.maybedata_version}")
 
-    include modImplementation("dev.lambdaurora:spruceui:${project.spruceui_version}")
-
-    // Use TOML for mod config
-    implementation(include("com.moandjiezana.toml:toml4j:${project.toml_version}"))
-
     shadowCommon(project(path: ":common", configuration: "transformProductionFabric")) { transitive false }
 }
 
