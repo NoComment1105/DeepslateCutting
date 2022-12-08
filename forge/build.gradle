@@ -20,16 +20,19 @@ processResources {
     }
 }
 
-tasks.withType(processResources.class) {
+processResources {
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }
 
 loom {
     forge {
-        launches {
-            data {
-                arg "--existing", file("src/main/resources").absolutePath
-            }
+        dataGen {
+            mod('deepslatecutting_forge')
+        }
+    }
+    runs {
+        data {
+            programArgs "--existing", file("src/main/resources").absolutePath
         }
     }
 }

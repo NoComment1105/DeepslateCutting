@@ -10,10 +10,8 @@ import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.text.ScreenTexts;
 import net.minecraft.text.Text;
-import net.minecraft.text.Texts;
 
 import java.io.IOException;
-import java.util.function.Consumer;
 
 public class ConfigScreen extends GameOptionsScreen {
     private final Screen parent;
@@ -38,16 +36,15 @@ public class ConfigScreen extends GameOptionsScreen {
         this.list.addSingleOptionEntry(extrasOption.asOption());
         this.addSelectableChild(this.list);
 
-        this.addDrawableChild(new ButtonWidget(this.width / 2 - 100, this.height - 27, 200, 20, ScreenTexts.DONE,
-                btn -> {
-                    try {
-                        Config.update(DeepslateCutting.configPath, extrasOption.getValue());
-                    } catch (IOException e) {
-                        DeepslateCuttingMain.LOGGER.error("Failed to initialise DeepslateCutting configuration, default values will be used instead");
-                        DeepslateCuttingMain.LOGGER.error("", e);
-                    }
-                    this.client.setScreen(this.parent);
-                }));
+        this.addDrawableChild(new ButtonWidget.Builder(ScreenTexts.DONE, buttonWidget -> {
+            try {
+                Config.update(DeepslateCutting.configPath, extrasOption.getValue());
+            } catch (IOException e) {
+                DeepslateCuttingMain.LOGGER.error("Failed to initialise DeepslateCutting configuration, default values will be used instead");
+                DeepslateCuttingMain.LOGGER.error("", e);
+            }
+            this.client.setScreen(this.parent);
+        }).positionAndSize(this.width / 2 - 100, this.height - 27, 200, 20).build());
     }
 
     @Override
