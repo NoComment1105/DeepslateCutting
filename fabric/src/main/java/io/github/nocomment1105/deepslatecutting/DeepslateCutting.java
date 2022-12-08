@@ -4,7 +4,9 @@ import io.github.nocomment1105.deepslatecutting.config.Config;
 import io.github.nocomment1105.deepslatecutting.registry.ModRegistry;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.loader.api.FabricLoader;
+import net.minecraft.item.ItemGroups;
 
 import java.io.IOException;
 import java.nio.file.Path;
@@ -25,6 +27,11 @@ public class DeepslateCutting implements ModInitializer {
         }
 
         if (config.areExtrasEnabled()) {
+            ItemGroupEvents.modifyEntriesEvent(ItemGroups.f_pnoyoezv).register(entries -> {
+                entries.addItem(ModRegistry.DEEPSLATE_SLAB_ITEM);
+                entries.addItem(ModRegistry.DEEPSLATE_STAIRS_ITEM);
+                entries.addItem(ModRegistry.DEEPSLATE_WALL_ITEM);
+            });
             ModRegistry.init();
             DeepslateCuttingMain.LOGGER.info("Loaded Config! Regular deepslate extras are ON");
             if (FabricLoader.getInstance().getEnvironmentType() == EnvType.SERVER) {
