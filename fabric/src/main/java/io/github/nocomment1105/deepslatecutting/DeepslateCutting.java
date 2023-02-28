@@ -27,7 +27,7 @@ public class DeepslateCutting implements ModInitializer {
         }
 
         if (config.areExtrasEnabled()) {
-            ItemGroupEvents.modifyEntriesEvent(ItemGroups.f_pnoyoezv).register(entries -> {
+            ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
                 entries.addItem(ModRegistry.DEEPSLATE_SLAB_ITEM);
                 entries.addItem(ModRegistry.DEEPSLATE_STAIRS_ITEM);
                 entries.addItem(ModRegistry.DEEPSLATE_WALL_ITEM);

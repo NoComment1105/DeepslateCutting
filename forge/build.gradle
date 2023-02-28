@@ -27,12 +27,12 @@ processResources {
 loom {
     forge {
         dataGen {
-            mod('deepslatecutting_forge')
+            mod 'deepslatecutting_forge'
         }
     }
     runs {
         data {
-            programArgs "--existing", file("src/main/resources").absolutePath
+            vmArgs("--existing", file("src/main/resources").absolutePath)
         }
     }
 }
