@@ -1,6 +1,6 @@
 plugins {
 	id "architectury-plugin" version "3.+"
-	id "dev.architectury.loom" version "1.+" apply false
+	id "dev.architectury.loom" version "1.0.+" apply false
 	id "io.github.juuxel.loom-quiltflower" version "1.+" apply false
 	id "com.github.johnrengelman.shadow" version "7.+" apply false
 	id "maven-publish"
@@ -28,6 +28,9 @@ allprojects {
 	apply plugin: "architectury-plugin"
 	apply plugin: "maven-publish"
 
+	sourceCompatibility = JavaVersion.toVersion(targetJavaVersion)
+	targetCompatibility = JavaVersion.toVersion(targetJavaVersion)
+
 	version = project.mod_version
 	group = project.maven_group
 
@@ -46,19 +49,13 @@ allprojects {
 		maven { url = 'https://maven.quiltmc.org/repository/release/' }
 	}
 
-	java {
-		sourceCompatibility = JavaVersion.toVersion(targetJavaVersion)
-		targetCompatibility = JavaVersion.toVersion(targetJavaVersion)
-
-		withSourcesJar()
-	}
+	java.withSourcesJar()
 
 	jar {
 		from('LICENSE')
 	}
 
 	wrapper {
-		gradleVersion("7.6")
 		distributionType(Wrapper.DistributionType.BIN)
 	}
 }

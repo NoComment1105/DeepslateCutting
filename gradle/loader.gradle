@@ -5,26 +5,33 @@ architectury.platformSetupLoomIde()
 configurations {
     common
     shadowCommon // Don't use shadow from the shadow plugin because we don't want IDEA to index this.
-    compileClasspath.extendsFrom common
-    runtimeClasspath.extendsFrom common
+    compileOnly.extendsFrom(common)
+    runtimeClasspath.extendsFrom(common)
 }
 
 dependencies {
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
 }
 
+processResources {
+    from(rootProject.file("common/src/main/resources")) {
+        include("**/**")
+        duplicatesStrategy = DuplicatesStrategy.WARN
+    }
+}
+
 shadowJar {
     configurations = [project.configurations.shadowCommon]
-    classifier "dev-shadow"
+    archiveClassifier.set("dev-shadow")
 }
 
 remapJar {
     inputFile.set shadowJar.archiveFile
     dependsOn shadowJar
-    classifier null
+    archiveClassifier.set(null)
 }
 
-jar.classifier "dev"
+jar.archiveClassifier.set("dev")
 
 sourcesJar {
     duplicatesStrategy(DuplicatesStrategy.WARN)
