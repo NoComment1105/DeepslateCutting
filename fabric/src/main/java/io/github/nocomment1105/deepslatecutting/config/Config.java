@@ -1,6 +1,5 @@
 package io.github.nocomment1105.deepslatecutting.config;
 
-import io.github.nocomment1105.deepslatecutting.DeepslateCutting;
 import io.github.nocomment1105.deepslatecutting.DeepslateCuttingMain;
 
 import java.io.IOException;
@@ -18,7 +17,7 @@ public class Config {
 
     public Config(Path propertiesPath) {
         enableExtras = false;
-        this.propertiesPath = propertiesPath;
+        Config.propertiesPath = propertiesPath;
     }
 
     public void init() throws IOException {

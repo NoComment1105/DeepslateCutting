@@ -10,7 +10,6 @@ import net.minecraft.text.Text;
  */
 public class BooleanConfigOption implements OptionConvertable {
     private final String key, translationKey;
-    private final boolean defaultValue;
     private final Text enabledText;
     private final Text disabledText;
 
@@ -18,7 +17,6 @@ public class BooleanConfigOption implements OptionConvertable {
         ConfigOptionStorage.setBoolean(key, defaultValue);
         this.key = key;
         this.translationKey = "config.deepslatecutting."+ key;
-        this.defaultValue = defaultValue;
         this.enabledText = Text.translatable(translationKey + "." + enabledKey);
         this.disabledText = Text.translatable(translationKey + "." + disabledKey);
     }

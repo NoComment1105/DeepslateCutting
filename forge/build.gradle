@@ -7,7 +7,7 @@ configurations {
 }
 
 dependencies {
-    forge "net.minecraftforge:forge:$rootProject.minecraft_version-$rootProject.forge_version"
+    forge("net.minecraftforge:forge:$rootProject.minecraft_version-$rootProject.forge_version")
 
     shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
 }
