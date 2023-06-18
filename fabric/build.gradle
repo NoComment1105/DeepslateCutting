@@ -24,7 +24,7 @@ dependencies {
     modImplementation("com.terraformersmc:modmenu:${project.modmenu_version}")
 
     // maybe-data for conditional recipe loading
-    include(modImplementation("com.github.NoComment1105:maybe-data:${project.maybedata_version}"))
+//    include(modImplementation("com.github.NoComment1105:maybe-data:${project.maybedata_version}"))
 
     shadowCommon(project(path: ":common", configuration: "transformProductionFabric")) { transitive false }
 }
