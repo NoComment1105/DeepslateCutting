@@ -3,12 +3,13 @@ package io.github.nocomment1105.deepslatecutting.config;
 import io.github.nocomment1105.deepslatecutting.DeepslateCutting;
 import io.github.nocomment1105.deepslatecutting.DeepslateCuttingMain;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.option.GameOptionsScreen;
 import net.minecraft.client.gui.widget.ButtonListWidget;
 import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.text.ScreenTexts;
+import net.minecraft.text.CommonTexts;
 import net.minecraft.text.Text;
 
 import java.io.IOException;
@@ -36,7 +37,7 @@ public class ConfigScreen extends GameOptionsScreen {
         this.list.addSingleOptionEntry(extrasOption.asOption());
         this.addSelectableChild(this.list);
 
-        this.addDrawableChild(new ButtonWidget.Builder(ScreenTexts.DONE, buttonWidget -> {
+        this.addDrawableChild(new ButtonWidget.Builder(CommonTexts.DONE, buttonWidget -> {
             try {
                 Config.update(DeepslateCutting.configPath, extrasOption.getValue());
             } catch (IOException e) {
@@ -60,11 +61,11 @@ public class ConfigScreen extends GameOptionsScreen {
 
 
     @Override
-    public void render(MatrixStack matrices, int mouseX, int mouseY, float delta) {
-        this.renderBackground(matrices);
-        this.list.render(matrices, mouseX, mouseY, delta);
-        drawCenteredText(matrices, this.textRenderer, this.title, this.width / 2, 8, 0xffffff);
-        drawCenteredText(matrices, this.textRenderer, "This option requires a restart to take effect.", this.width / 2, this.height / 2 - 57, 0xffffff);
-        super.render(matrices, mouseX, mouseY, delta);
+    public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float delta) {
+        this.renderBackground(guiGraphics);
+        this.list.render(guiGraphics, mouseX, mouseY, delta);
+        guiGraphics.drawCenteredShadowedText(this.textRenderer, this.title, this.width / 2, 8, 0xffffff);
+        guiGraphics.drawCenteredShadowedText(this.textRenderer, "This option requires a restart to take effect.", this.width / 2, this.height / 2 - 57, 0xffffff);
+        super.render(guiGraphics, mouseX, mouseY, delta);
     }
 }
