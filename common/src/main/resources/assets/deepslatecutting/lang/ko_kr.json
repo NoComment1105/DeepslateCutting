@@ -1,0 +1,9 @@
+{
+  "block.deepslatecutting.deepslate_slab": "심층암 반 블록",
+  "block.deepslatecutting.deepslate_stairs": "심층암 계단",
+  "block.deepslatecutting.deepslate_wall": "심층암 담장",
+  "config.deepslatecutting.title": "DeepslateCutting 설정",
+  "config.deepslatecutting.toggle_deepslate_extras": "심층암 추가 기능 전환",
+  "config.deepslatecutting.toggle_deepslate_extras.true": "켜기",
+  "config.deepslatecutting.toggle_deepslate_extras.false": "끄기"
+}
