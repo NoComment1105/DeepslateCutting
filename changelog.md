@@ -1,2 +1,3 @@
-## Version 1.6.0
-* Update to 1.19.4. Just to bump some deps that needed updating
+## Version 1.7.0
+* Update to 1.20
+* Remove deepslate extras
