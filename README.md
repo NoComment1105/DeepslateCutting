@@ -14,12 +14,11 @@
 ![icon](fabric/src/main/resources/assets/deepslatecutting/icon.png)
 
 ### What is the purpose of this Mod?
-This mod allows regular deepslate to be put into the stone cutter and made into the various stone cuttable items
+This mod allows regular deepslate to be put into the stone cutter and made into the various stone-cuttable items
 
 ### Features
 * Allows regular deepslate to be used in the stone cutter
-* As well as this it adds regular Deepslate variants of wall, stairs and slab. All of these configured off by defualt. (FABRIC & QUILT ONLY for now)
-
+* 
 ### Versioning
 This mod is >= 1.17 at it's oldest. I am **NOT** going to back-port this mod to any older versions
 I will try my hardest to update this mod, in its latest release at the time, within a week the next version

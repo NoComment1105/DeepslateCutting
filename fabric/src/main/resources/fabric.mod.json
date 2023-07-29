@@ -31,9 +31,6 @@
   "entrypoints": {
     "main": [
       "io.github.nocomment1105.deepslatecutting.DeepslateCutting"
-    ],
-    "modmenu": [
-      "io.github.nocomment1105.deepslatecutting.DeepslateCuttingModMenu"
     ]
   },
   "mixins": [ ],

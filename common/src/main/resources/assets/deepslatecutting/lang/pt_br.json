@@ -1,9 +1,0 @@
-{
-    "block.deepslatecutting.deepslate_slab": "Laje de Ardósia",
-    "block.deepslatecutting.deepslate_stairs": "Escadas de Ardósia",
-    "block.deepslatecutting.deepslate_wall": "Parede de Ardósia",
-    "config.deepslatecutting.title": "Configurar DeepslateCutting",
-    "config.deepslatecutting.toggle_deepslate_extras": "Alternar para ter Ardósia Extra",
-    "config.deepslatecutting.toggle_deepslate_extras.true": "SIM",
-    "config.deepslatecutting.toggle_deepslate_extras.false": "NÃO"
-}

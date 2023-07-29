@@ -5,5 +5,4 @@ import org.apache.logging.log4j.Logger;
 
 public class DeepslateCuttingMain {
     public static final String MOD_ID = "deepslatecutting";
-    public static final Logger LOGGER = LogManager.getLogger("Deepslate Cutting");
 }
