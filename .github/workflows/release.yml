@@ -32,12 +32,12 @@ jobs:
         uses: AButler/upload-release-assets@v3.0
 
         with:
-          files: 'fabric/build/libs/*.jar;!neoforge/build/libs/*-dev.jar'
+          files: 'fabric/build/libs/*.jar;!fabric/build/libs/*-dev.jar'
           repo-token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Upload Forge artifacts GitHub
+      - name: Upload NeoForge artifacts GitHub
         uses: AButler/upload-release-assets@v3.0
 
         with:
-          files: 'forge/build/libs/*.jar;!neoforge/build/libs/*-dev.jar'
+          files: 'neoforge/build/libs/*.jar;!neoforge/build/libs/*-dev.jar'
           repo-token: ${{ secrets.GITHUB_TOKEN }}
