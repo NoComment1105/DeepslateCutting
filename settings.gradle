@@ -1,24 +1,14 @@
 pluginManagement {
     repositories {
-        maven {
-            name 'Architectury'
-            url 'https://maven.architectury.dev/'
-        }
-        maven {
-            name 'Fabric'
-            url 'https://maven.fabricmc.net/'
-        }
-        maven {
-            name 'Forge'
-            url 'https://maven.minecraftforge.net/'
-        }
+        maven { url "https://maven.fabricmc.net/" }
+        maven { url "https://maven.architectury.dev/" }
+        maven { url "https://files.minecraftforge.net/maven/" }
         gradlePluginPortal()
-        mavenCentral()
     }
 }
 
-include("common")
-include("fabric")
-include("forge")
-
 rootProject.name = 'DeepslateCutting'
+
+include 'common'
+include 'fabric'
+include 'neoforge'

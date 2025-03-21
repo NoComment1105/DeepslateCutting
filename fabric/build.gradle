@@ -6,30 +6,19 @@ configurations {
     developmentFabric.extendsFrom common
 }
 
-repositories {
-    maven {
-        url = 'https://maven.terraformersmc.com/releases/'
-        content { includeGroup "com.terraformersmc" }
-    }
-    maven {
-        url = 'https://maven.gegy.dev'
-    }
-}
-
 dependencies {
-    modImplementation("net.fabricmc:fabric-loader:${project.fabric_loader_version}")
-    modApi("net.fabricmc.fabric-api:fabric-api:${project.fabric_version}")
+    modImplementation "net.fabricmc:fabric-loader:$rootProject.fabric_loader_version"
 
-    shadowCommon(project(path: ":common", configuration: "transformProductionFabric")) { transitive false }
+    // Fabric API. This is technically optional, but you probably want it anyway.
+    modImplementation "net.fabricmc.fabric-api:fabric-api:$rootProject.fabric_version"
+
+    shadowBundle project(path: ':common', configuration: 'transformProductionFabric')
 }
 
 processResources {
-    inputs.property "version", project.version
-    filesMatching("fabric.mod.json") {
-        expand "version": project.version
-    }
-}
+    inputs.property 'version', project.version
 
-publishing.publications {
-    mavenFabric(MavenPublication) from components.java
+    filesMatching('fabric.mod.json') {
+        expand version: project.version
+    }
 }
