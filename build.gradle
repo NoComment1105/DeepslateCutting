@@ -22,10 +22,10 @@ subprojects {
 	apply plugin: 'architectury-plugin'
 	apply plugin: 'maven-publish'
 
-//	base {
-//		// Set up a suffixed format for the mod jar names, e.g. `example-fabric`.
-//		archivesName = "$rootProject.archives_name-$project.name"
-//	}
+	base {
+		// Set up a suffixed format for the mod jar names, e.g. `example-fabric`.
+		archivesName = "$project.archives_base_name-$project.name"
+	}
 
 	repositories {
 		// Add repositories to retrieve artifacts from in here.
