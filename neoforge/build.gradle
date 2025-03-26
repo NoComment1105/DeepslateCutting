@@ -14,7 +14,9 @@ repositories {
 }
 
 dependencies {
-    neoForge "net.neoforged:neoforge:$rootProject.neoforge_version"
+    neoForge "net.neoforged:neoforge:$project.neoforge_version"
+
+    modImplementation "dev.architectury:architectury-neoforge:$project.architectury_version"
 
     shadowBundle project(path: ':common', configuration: 'transformProductionNeoForge')
 }

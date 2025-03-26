@@ -30,7 +30,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "io.github.nocomment1105.deepslatecutting.DeepslateCutting"
+      "io.github.nocomment1105.deepslatecutting.fabric.DeepslateCutting"
+    ],
+    "modmenu": [
+      "io.github.nocomment1105.deepslatecutting.fabric.DeepslateCuttingModMenu"
     ]
   },
   "mixins": [ ],
@@ -39,6 +42,7 @@
     "fabricloader": ">=0.16.1",
     "fabric-api": "*",
     "minecraft": ">=1.21.4",
+    "architectury": ">=15.0.1",
     "java": ">=21"
   },
   "recommends": {

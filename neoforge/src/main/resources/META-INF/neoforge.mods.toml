@@ -5,7 +5,7 @@ license = "LGPL-3.0"
 showAsResourcePack = false
 
 [[mods]]
-modId = "deepslatecutting_neoforge"
+modId = "deepslatecutting"
 version = "${version}"
 displayName = "DeepslateCutting"
 displayURL = "https://github.com/NoComment1105/DeepslateCutting"
@@ -15,14 +15,14 @@ This mod allows you to use regular Deepslate in a stonecutter!
 '''
 logoFile = "icon.png"
 
-[[dependencies.deepslatecutting_neoforge]]
+[[dependencies.deepslatecutting]]
 modId = "neoforge"
 type = "required"
 versionRange = "[21.4,)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.deepslatecutting_neoforge]]
+[[dependencies.deepslatecutting]]
 modId = "minecraft"
 type = "required"
 versionRange = "[1.21.4,)"
